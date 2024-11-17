@@ -1,0 +1,229 @@
+.theme-dark body {
+    background-color: var(--color-dark-1);
+    color: var(--color-grey-1)
+}
+
+.theme-dark p {
+    color: rgba(255,255,255,.75)
+}
+
+.theme-dark p a {
+    color: rgba(255,255,255,.75) !important
+}
+
+.theme-dark .h1, .theme-dark .h2, .theme-dark .h3, .theme-dark .h4, .theme-dark .h5, .theme-dark .h6, .theme-dark h1, .theme-dark h2, .theme-dark h3, .theme-dark h4, .theme-dark h5, .theme-dark h6,
+.theme-dark .h1 a, .theme-dark .h2 a, .theme-dark .h3 a, .theme-dark .h4 a, .theme-dark .h5 a, .theme-dark .h6 a, .theme-dark h1 a, .theme-dark h2 a, .theme-dark h3 a, .theme-dark h4 a, .theme-dark h5 a, .theme-dark h6 a,
+.theme-dark .icon-group.-secondary, .theme-dark .button.-secondary, .theme-dark .icon-group.-outlined,
+.theme-dark .text-dark-1, .nav-dark .text-dark-1, .theme-dark .text-dark {
+    color: var(--color-light-2) !important
+}
+
+.theme-dark .icon-group.-outlined {
+    border-color: var(--color-white);
+}
+
+.theme-dark .form-control {
+    border: 1px solid var(--color-dark-3);
+    background-color: rgba(150,144,162,.06) !important;
+    color: rgba(235,228,228,.6) !important;
+}
+
+.theme-dark .form-control.text-field {
+    background-color: rgba(150,144,162,.06) !important;
+}
+
+.theme-dark .form-control::placeholder, .theme-dark .form-control::-moz-placeholder, .theme-dark .form-control:-ms-input-placeholder {
+    color: rgba(235,228,228,.6);
+}
+
+.theme-dark .form-control:focus::-moz-placeholder {
+    color: transparent;
+    border-color: var(--color-primary);
+}
+
+.theme-dark .form-control:focus:-ms-input-placeholder {
+    color: transparent;
+    border-color: var(--color-primary);
+}
+
+.theme-dark .form-control:focus::placeholder {
+    color: transparent;
+    border-color: var(--color-primary);
+}
+
+.theme-dark .navbar-area.style2 {
+    background-color: transparent
+}
+
+.theme-dark .desktop-nav .navbar-brand .main-logo {
+    display: none
+}
+
+.theme-dark .desktop-nav .navbar-brand .white-logo {
+    display: block
+}
+
+.theme-dark .desktop-nav .navbar .navbar-nav .nav-item a, .nav-dark .desktop-nav .navbar .navbar-nav .nav-item a {
+    color: var(--color-white)
+}
+
+.theme-dark .desktop-nav .navbar .navbar-nav .nav-item a:hover, .theme-dark .desktop-nav .navbar .navbar-nav .nav-item a.active,
+.nav-dark .desktop-nav .navbar .navbar-nav .nav-item a:hover, .nav-dark .desktop-nav .navbar .navbar-nav .nav-item a.active {
+    color: var(--color-primary);
+}
+
+.theme-dark .desktop-nav .navbar .navbar-nav .nav-item .dropdown-menu li a,
+.nav-dark .desktop-nav .navbar .navbar-nav .nav-item .dropdown-menu li a {
+    color: var(--color-black)
+}
+
+.theme-dark .desktop-nav .navbar .offcanvas .navbar-nav .nav-item .dropdown-menu li a,
+.nav-dark .desktop-nav .navbar .offcanvas .navbar-nav .nav-item .dropdown-menu li a {
+    color: var(--color-grey-1)
+}
+
+.theme-dark .desktop-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:hover, .theme-dark .desktop-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:focus, .theme-dark .desktop-nav .navbar .navbar-nav .nav-item .dropdown-menu li a.active
+.nav-dark .desktop-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:hover, .nav-dark .desktop-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:focus, .nav-dark .desktop-nav .navbar .navbar-nav .nav-item .dropdown-menu li a.active {
+    color: var(--color-primary);
+}
+
+.theme-dark .filter-button ul li button {
+    color: var(--color-white)
+}
+
+.theme-dark .filter-button ul li button:hover, .theme-dark .filter-button ul li button:focus, .theme-dark .filter-button ul li button.active {
+    background-color: #0e0e0e;
+    color: var(--color-white)
+}
+.theme-dark .paginations ul li a {
+    color: var(--color-white);
+    border-color: var(--color-grey-1)
+}
+
+.theme-dark .paginations.style2 ul li a {
+    background-color: var(--color-black)
+}
+
+.theme-dark .paginations.style2 ul li a:hover, .theme-dark .paginations.style2 ul li a.active {
+    background-color: var(--color-primary);
+}
+
+.theme-dark .faq-accordion .accordion .accordion-content {
+    background-color: var(--color-black)
+}
+
+.theme-dark .faq-accordion .accordion .accordion-title {
+    background-color: var(--color-black);
+    color: var(--color-white)
+}
+
+.theme-dark .sidemenu-area .sidemenu-body .sidemenu-nav .nav-item .nav-link {
+    color: var(--color-white)
+}
+
+.theme-dark .sidemenu-area .sidemenu-body .sidemenu-nav .nav-item .nav-link .icon {
+    color: var(--color-white)
+}
+
+.theme-dark .sidemenu-area .sidemenu-body .sidemenu-nav .nav-item .nav-link .icon img {
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(118deg) brightness(103%) contrast(102%)
+}
+
+.theme-dark .sidemenu-area .sidemenu-body .sidemenu-nav .nav-item .nav-link:hover {
+    background-color: var(--color-dark-2);
+}
+
+.theme-dark .sidemenu-area .sidemenu-body .sidemenu-nav .nav-item .nav-link:hover .icon {
+    transform: rotateY(-180deg);
+}
+
+.theme-dark .sidemenu-area .sidemenu-body .sidemenu-nav .nav-item .nav-link:hover .icon img {
+    filter: invert(33%) sepia(47%) saturate(3411%) hue-rotate(204deg) brightness(85%) contrast(93%)
+}
+
+.theme-dark .sidemenu-area .sidemenu-body .sidemenu-nav .nav-item.active .nav-link {
+    background-color: var(--color-dark-2);
+    color: var(--color-primary);;
+}
+
+.theme-dark .sidemenu-area .sidemenu-body .sidemenu-nav .nav-item.active .nav-link .icon {
+    color: var(--color-primary);
+}
+
+.theme-dark .sidemenu-area .sidemenu-body .sidemenu-nav .nav-item.active .nav-link .icon img {
+    filter: invert(33%) sepia(47%) saturate(3411%) hue-rotate(204deg) brightness(85%) contrast(93%)
+}
+
+@media only screen and (max-width: 991px) {
+    .theme-dark .navbar-area.style2 {
+        background-color: #1a1919
+    }
+
+    .theme-dark .mobile-responsive-nav .mobile-responsive-menu .logo .white-logo {
+        display: block
+    }
+
+    .theme-dark .mobile-responsive-nav .mobile-responsive-menu .logo .main-logo {
+        display: none
+    }
+
+    .theme-dark .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav ul {
+        background-color: #090909
+    }
+
+    .theme-dark .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav ul li a {
+        color: var(--color-white) !important;
+        border-top: 1px solid rgba(86, 85, 85, .5)
+    }
+
+    .theme-dark .offcanvas {
+        background-color: var(--color-dark-2) !important;
+    }
+
+    .theme-dark .desktop-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:hover, .theme-dark .desktop-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:focus, .theme-dark .desktop-nav .navbar .navbar-nav .nav-item .dropdown-menu li a.active {
+        background-color: var(--color-dark-l);
+    }
+    .theme-dark .desktop-nav .navbar .navbar-nav .nav-item .dropdown-menu li a + ul li a{
+        padding-left: 34px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .theme-dark .sidemenu-area {
+        background: var(--color-black)
+    }
+
+    .theme-dark .sidemenu-area .sidemenu-header {
+        background: var(--color-black)
+    }
+
+    .theme-dark .sidemenu-area .sidemenu-body {
+        background: var(--color-black)
+    }
+}
+
+.theme-dark .blog-wrap, .theme-dark .sidebar-widget, .theme-dark .sidebar-widget .tag-list a, .theme-dark .pagination .page-item:hover .page-link,
+.theme-dark .bg-success-l, .theme-dark .bg-danger-l, .theme-dark .bg-info-l, .theme-dark .bg-warning-l, .theme-dark .bg-dark-1,
+.theme-dark .card{
+    background-color: rgba(225,225,225,.06) !important;
+}
+
+.theme-dark .sidebar-widget .category-list a{
+    color: var(--color-white);
+}
+
+.theme-dark .navbar-area.is-sticky {
+    background-color: var(--color-dark-2) !important;
+}
+
+.theme-dark .text-dark-2, .theme-dark .text-dark-3, .theme-dark .single-post-tag a, .theme-dark .accordion-toggle {
+    color: rgba(235,228,228,.6) !important;
+}
+
+.theme-dark .theme-gradient, .theme-dark .theme-gradient-1, .theme-dark .theme-gradient-2, .theme-dark .theme-gradient-3, .theme-dark .theme-gradient-4, .theme-dark .theme-gradient-5, .theme-dark .theme-gradient-6, .theme-dark .theme-gradient-7{
+    background: rgba(225,225,225,.06) !important;
+}
+
+.theme-dark .block-bf-af:after, .block-bf-af:before {
+    background-color: var(--color-dark-3) !important;
+}

@@ -1,0 +1,273 @@
+@media only screen and (max-width: 576px) {
+    .navbar-area, .main-dashboard-content {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .accordion-button {
+        font-size: 16px;
+    }
+    .accordion-body {
+        font-size: 14px;
+    }
+    p{
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 769px) {
+    h1 {
+        font-size: 36px
+    }
+
+    h2 {
+        font-size: 28px
+    }
+
+    h3 {
+        font-size: 22px
+    }
+
+    h4 {
+        font-size: 20px
+    }
+
+    p{
+        font-size: 15px;
+    }
+
+    .title-head h1 {
+        font-size: 22px;
+    }
+
+    .d-state.-style1 .d-state-box {
+        width: 100%!important;
+    }
+
+    .card{
+        padding: 16px;
+    }
+
+    .main-dashboard-content {
+        margin-left: 0;
+    }
+    .sidemenu-area {
+        right: -100%;
+        z-index: 9999;
+        font-size: 14px;
+        width: 250px;
+        top: 0;
+    }
+    .mobile-responsive-nav {
+        display: block;
+        z-index: 9999;
+    }
+    .mobile-responsive-nav .mobile-responsive-menu {
+        position: relative;
+    }
+    .mobile-responsive-nav + .desktop-nav {
+        display: none!important;
+    }
+
+    .phone-frame {
+        width: 310px;
+        max-width: 310px;
+        height: 650px;
+        max-height: 650px;
+    }
+
+    .d-state-box {
+        border-bottom: 1px solid rgba(150, 144, 162, 0.15);
+    }
+    .d-state-box:last-child {
+        border-bottom: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .sidemenu-area.desktopnav-menu{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 769px) {
+    .navbar-area, .main-dashboard-content {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    p{
+        font-size: 15px;
+    }
+    .d-state-widget-1 .d-state-widget-box {
+        width: 33%;
+        padding: 10px!important;
+    }
+    .card{
+        padding: 24px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .sidemenu-area.active-sidemenu-area {
+        right: 0;
+    }
+    .sidemenu-area .sidemenu-body .sidemenu-nav .nav-item .nav-link {
+        padding: 12px 25px 12px;
+    }
+    .navbar-area .mobile-responsive-nav .mobile-responsive-menu .sidemenu-header {
+        display: block;
+    }
+    .sidemenu-area {
+        width: 250px;
+    }
+    .navbar-expand-lg .offcanvas-nav .offcanvas-body,.navbar-expand-lg .offcanvas-nav .offcanvas-footer,.navbar-expand-lg .offcanvas-nav .offcanvas-header {
+        width: 100%;
+    }
+    .navbar-expand-lg .offcanvas-nav {
+        overflow-x: hidden;
+        overflow-y: auto;
+        flex-direction: column;
+    }
+    .navbar-expand-lg .offcanvas-nav .offcanvas-body {
+        overflow-y: unset;
+        flex-grow: 0;
+    }
+    /*Offcanvas Navbar*/
+
+    .offcanvas {
+        width: 300px !important;
+    }
+    .offcanvas-header {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: row
+    }
+
+    .offcanvas-header .btn-close {
+        margin: 0;
+        padding: 0;
+        margin-right: -.5rem
+    }
+
+    .offcanvas-header a:focus {
+        outline: 0
+    }
+
+    .offcanvas-body {
+        padding-top: 0;
+        padding-bottom: 0
+    }
+
+    .offcanvas-nav .offcanvas-header .btn-close {
+        margin-right: -.75rem
+    }
+
+    .offcanvas-nav .offcanvas-body {
+        flex-grow: 0
+    }
+
+    .offcanvas:not(.offcanvas-nav) {
+        overflow-y: auto
+    }
+
+    .offcanvas:not(.offcanvas-nav) .offcanvas-body {
+        overflow-y: unset
+    }
+
+    .offcanvas-footer {
+        display: flex;
+        flex-shrink: 0;
+        margin-top: auto;
+        padding: 1.5rem 0
+    }
+
+    .desktop-nav .offcanvas .navbar-nav .nav-item .dropdown-menu {
+        display: none;
+        position: static;
+        visibility: visible !important;
+        opacity: 1 !important;
+        background: 0 0;
+        border: none;
+        box-shadow: none;
+    }
+
+    .desktop-nav .offcanvas .navbar-nav .nav-item .dropdown-menu.show {
+        display: block;
+    }
+
+    .desktop-nav .offcanvas .navbar-nav .nav-item {
+        padding: 10px 0;
+    }
+
+    .desktop-nav .offcanvas .navbar-nav .nav-item .dropdown-menu {
+        width: 100%;
+    }
+    .navbar-area.nav-dark .offcanvas {
+        background-color: var(--color-dark-2) !important;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .dashboard-container{
+        padding-left: 15px;
+        padding-right: 15px;
+        justify-content: space-between;
+    }
+    .dashboard-container .sidemenu-area .sidemenu-header .responsive-burger-menu {
+        display: none !important;
+    }
+
+    /*.desktop-nav .navbar-collapse{
+        display: none!important;
+    }*/
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .sidemenu-area {
+        width: 250px;
+    }
+    .sidemenu-area .sidemenu-header .responsive-burger-menu {
+        display: none !important;
+    }
+    .sidemenu-area .sidemenu-body .sidemenu-nav .nav-item .nav-link {
+        padding: 15px 30px 15px;
+    }
+    .main-dashboard-content {
+        padding-right: 30px;
+        padding-left: 255px;
+    }
+    .card{
+        padding: 24px;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    .sidemenu-area {
+        width: 230px;
+    }
+    .sidemenu-area .sidemenu-header .responsive-burger-menu {
+        display: none !important;
+    }
+    .sidemenu-area .sidemenu-body .sidemenu-nav .nav-item .nav-link {
+        padding: 15px 30px 15px;
+    }
+    .main-dashboard-content {
+        padding-right: 30px;
+        padding-left: 255px;
+    }
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+    .sidemenu-area .sidemenu-header .responsive-burger-menu {
+        display: none !important;
+    }
+}
+
+@media only screen and (min-width: 1600px) and (max-width: 1920px) {
+    .sidemenu-area .sidemenu-header .responsive-burger-menu {
+        display: none !important;
+    }
+}
+

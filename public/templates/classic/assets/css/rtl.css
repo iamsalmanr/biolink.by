@@ -1,0 +1,9 @@
+html {
+    direction: rtl;
+}
+
+@media screen and (max-width: 1180px) {
+    .switcher input:checked+.slider::before {
+        transform: translateX(-24px);
+    }
+}

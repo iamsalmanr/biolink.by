@@ -1,0 +1,74 @@
+<?php
+
+namespace App\Providers;
+
+use Illuminate\Cache\RateLimiting\Limit;
+use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\RateLimiter;
+use Illuminate\Support\Facades\Route;
+use Str;
+
+class RouteServiceProvider extends ServiceProvider
+{
+    /**
+     * The path to the "controllers".
+     *
+     * This is used by Laravel routes to make the old routes working.
+     *
+     * @var string
+     */
+    protected $namespace = 'App\Http\Controllers';
+
+    /**
+     * The path to your application's "home" route.
+     *
+     * Typically, users are redirected here after authentication.
+     *
+     * @var string
+     */
+
+    public const USER = 'dashboard';
+    /**
+     * Define your route model bindings, pattern filters, and other route configuration.
+     */
+    public function boot()
+    {
+        $this->removeIndexFromUrl();
+        $this->configureRateLimiting();
+
+        $this->routes(function () {
+            Route::middleware('web')
+                ->namespace($this->namespace) // Assigning namespace
+                ->group(base_path('routes/web.php'));
+
+            Route::prefix('api')
+                ->namespace($this->namespace) // Assigning namespace
+                ->middleware('api')
+                ->group(base_path('routes/api.php'));
+        });
+    }
+
+    /**
+     * Configure the rate limiters for the application.
+     */
+    protected function configureRateLimiting(): void
+    {
+        RateLimiter::for('api', function (Request $request) {
+            return Limit::perMinute(60)->by($request->user()?->id ?: $request->ip());
+        });
+    }
+    /**
+     * Remove index.php from URL
+     */
+    protected function removeIndexFromUrl()
+    {
+        if (Str::contains(request()->getRequestUri(), '/index.php/')) {
+            $url = str_replace('index.php/', '', request()->getRequestUri());
+            if (strlen($url) > 0) {
+                header("Location: $url", true, 301);
+                exit;
+            }
+        }
+    }
+}

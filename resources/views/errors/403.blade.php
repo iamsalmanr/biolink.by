@@ -1,0 +1,5 @@
+@extends('errors.layout')
+@section('title', ___('Forbidden'))
+@section('code', '403')
+@section('message', ___('Forbidden'))
+@section('description', ___('You Do not Have The Right Permission To Access.'))
