@@ -660,4 +660,5 @@ return array (
   'leave_a_comment' => 'Leave a comment',
   'you_need_to_login_to_post_a_comment' => 'You need to login to post a comment.',
   'no_notifications_found' => 'No notifications found',
+  'biolinks_in_seconds_local' => 'Biolinks in Seconds Local',
 );
