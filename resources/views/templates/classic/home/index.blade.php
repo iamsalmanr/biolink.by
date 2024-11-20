@@ -10,7 +10,7 @@
                     <div class="col-lg-8 col-xxl-7 mx-auto position-relative">
                         <div>
                             <h1 class="display-1 sm-font-50 md-font-60 mb-24 fw-bold text-white">
-                                {{ ___('Biolinks in Seconds Local')  }}
+                                {{ ___('One Bio Link for Everything You Are')  }}
                             </h1>
                             <p class="lead font-18 mb-24 text-light-3">{{ ___("Make everything you promote on social searchable to help your followers find exactly what they're looking for. It’s easier than you think.")  }}</p>
                         </div>
