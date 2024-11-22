@@ -1,5 +1,6 @@
 @extends($activeTheme.'layouts.main')
 @section('navclass', 'nav-dark')
+
 @section('content')
 
     <section class="hero-wrapper -style2">
