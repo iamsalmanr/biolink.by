@@ -2,30 +2,7 @@
 @import "../css/helper.css";
 @import "../../assets/plugin/wow-animate/animate.css";
 
-body {
-    color: var(--color-dark-1);
-    background-color: var(--color-bg-light);
-    font-family: var(--font-primary);
-    font-size: 16px;
-    font-weight: 500;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    margin: 0; /* Remove any default margin */
-    padding: 0; /* Remove padding if present */
-    width: 100%; /* Ensure body width is exactly the viewport width */
-    position: relative; /* Keep relative positioning for child elements */
-}
 
-html {
-    overflow-x: hidden; /* Add a safeguard for the root element */
-    width: 100%; /* Ensure the HTML element also fits the viewport */
-}
-
-/* Additional Reset for Consistent Layout */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Ensure all elements respect box-sizing rules */
-}
 
 h1,
 h2,
@@ -773,11 +750,36 @@ Icon button CSS
 /*================================================
 Navbar CSS
 =================================================*/
+body {
+    color: var(--color-dark-1);
+    background-color: var(--color-bg-light);
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 500;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+     overflow-y: visible;
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove padding if present */
+    width: 100%; /* Ensure body width is exactly the viewport width */
+    position: relative; /* Keep relative positioning for child elements */
+}
 
+html {
+    overflow-x: hidden;
+    overflow-y: visible; /* Add a safeguard for the root element */
+    width: 100%; /* Ensure the HTML element also fits the viewport */
+}
+
+/* Additional Reset for Consistent Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure all elements respect box-sizing rules */
+}
 .navbar-area {
-    position: relative;
+    position: absolute;
     width: 100%;
-    z-index: 999;
+    z-index: 100;
     height: 70px;
     padding-left: 48px;
     padding-right: 48px;
@@ -787,12 +789,10 @@ Navbar CSS
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 999;
-    background-color: var(--color-white) !important;
-    position: -webkit-sticky !important;
-    position: sticky !important;
+    z-index: 100;
+    background-color: var(--color-dark-1) !important;
+    position: fixed !important;
     -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
-    animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
     box-shadow: 0 0 20px 3px rgba(0, 0, 0, .05)
 }
 
