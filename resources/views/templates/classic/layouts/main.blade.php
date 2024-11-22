@@ -5,8 +5,7 @@
     @include($activeTheme.'layouts.includes.styles')
     {!! head_code() !!}
 </head>
-<body style="margin: 0; padding: 0; overflow-x: hidden;">
-
+<body>
 @php
     $navclass = $__env->yieldContent('navclass') ?: 'nav-light';
 @endphp
