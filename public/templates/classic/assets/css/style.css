@@ -8,8 +8,23 @@ body {
     font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 500;
-    position: relative;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove padding if present */
+    width: 100%; /* Ensure body width is exactly the viewport width */
+    position: relative; /* Keep relative positioning for child elements */
+}
+
+html {
+    overflow-x: hidden; /* Add a safeguard for the root element */
+    width: 100%; /* Ensure the HTML element also fits the viewport */
+}
+
+/* Additional Reset for Consistent Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure all elements respect box-sizing rules */
 }
 
 h1,
@@ -1178,8 +1193,6 @@ Card CSS
     background-color: var(--color-white);
     transition: all ease-in-out 0.3s;
 }
-
-
 
 /*Dashboard Tile Widget*/
 .d-state.-style1 .d-state-box {
