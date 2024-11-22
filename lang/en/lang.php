@@ -666,4 +666,11 @@ return array (
   'your_link_in_seconds' => 'Your Link in Seconds',
   'join_99_influencers_and_create_a_mylink_page_to_grow_your_followers_across_all_social_networks' => 'Join 99+ influencers and create a MyLink page to grow your followers across all social networks.',
   'try_now' => 'Try Now',
+  'your_biolink_in_seconds' => 'Your BioLink in Seconds',
+  'join_99_influencers_and_create_a_biolink_page_to_grow_your_followers_across_all_social_networks' => 'Join 99+ influencers and create a BioLink page to grow your followers across all social networks.',
+  'join_50m_people_using_linktree_for_their_link_in_bio_one_link_to_help_you_share_everything_you_create_curate_and_sell_from_your_instagram_tiktok_twitter_youtube_and_other_social_media_profiles' => 'Join 50M+ people using Linktree for their link in bio. One link to help you share everything you create, curate and sell from your Instagram, TikTok, Twitter, YouTube and other social media profiles.',
+  'join_999_people_using_linktree_for_their_link_in_bio_one_link_to_help_you_share_everything_you_create_curate_and_sell_from_your_instagram_tiktok_twitter_youtube_and_other_social_media_profiles' => 'Join 999+ people using Linktree for their link in bio. One link to help you share everything you create, curate and sell from your Instagram, TikTok, Twitter, YouTube and other social media profiles.',
+  'join_999_people_using_biolink_for_their_link_in_bio_one_link_to_help_you_share_everything_you_create_curate_and_sell_from_your_instagram_tiktok_twitter_youtube_and_other_social_media_profiles' => 'Join 999+ people using Biolink for their link in bio. One link to help you share everything you create, curate and sell from your Instagram, TikTok, Twitter, YouTube and other social media profiles.',
+  'join_999_people_using_biolink_for_their_link_in_bio_one_link_to_help_you_share_everything_you_create' => 'Join 999+ people using Biolink for their link in bio. One link to help you share everything you create.',
+  'join_999_people_using_biolink_for_their_link_in_bio_one_link_to_help_you_share_everything_you_are' => 'Join 999+ people using Biolink for their link in bio. One link to help you share everything you are.',
 );
