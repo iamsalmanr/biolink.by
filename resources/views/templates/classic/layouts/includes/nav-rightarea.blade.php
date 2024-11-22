@@ -5,23 +5,8 @@
             @php
                 $language = current_language();
             @endphp
-            <a title="{{ $language->name }}" href="#" class="nav-link dropdown-toggle d-flex align-items-center">
-                <img src="{{ asset('storage/flags/' . $language->flag) }}" title="{{ $language->name }}"
-                     alt="{{ $language->name }}" width="16" height="11">
-                <span class="ml-5 d-none d-sm-block">{{ $language->name }}</span>
-            </a>
-            <ul class="dropdown-menu w-auto">
-                @foreach ($languages as $language)
-                    <li class="nav-item">
-                        <a title="English" href="{{ lang_url($language->code) }}"
-                           class="nav-link @if ($language->code == get_lang()) active @endif">
-                            <img src="{{ asset('storage/flags/'.$language->flag) }}" alt="{{ $language->name }}"
-                                 title="{{ $language->name }}" width="16" height="11">
-                            <span class="ml-5">{{ $language->name }}</span>
-                        </a>
-                    </li>
-                @endforeach
-            </ul>
+
+
         </li>
     </ul>
     <!--/ # Change language button-->
