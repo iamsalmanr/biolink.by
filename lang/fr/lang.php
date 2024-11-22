@@ -666,4 +666,8 @@ return array (
   'no_notifications_found' => 'No notifications found',
   'biolinks_in_seconds_local' => 'Biolinks in Seconds Local',
   'one_bio_link_for_everything_you_are' => 'One Bio Link for Everything You Are',
+  'one_title' => 'One Title',
+  'your_link_in_seconds' => 'Your Link in Seconds',
+  'join_99_influencers_and_create_a_mylink_page_to_grow_your_followers_across_all_social_networks' => 'Join 99+ influencers and create a MyLink page to grow your followers across all social networks.',
+  'try_now' => 'Try Now',
 );
