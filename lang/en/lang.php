@@ -673,4 +673,6 @@ return array (
   'join_999_people_using_biolink_for_their_link_in_bio_one_link_to_help_you_share_everything_you_create_curate_and_sell_from_your_instagram_tiktok_twitter_youtube_and_other_social_media_profiles' => 'Join 999+ people using Biolink for their link in bio. One link to help you share everything you create, curate and sell from your Instagram, TikTok, Twitter, YouTube and other social media profiles.',
   'join_999_people_using_biolink_for_their_link_in_bio_one_link_to_help_you_share_everything_you_create' => 'Join 999+ people using Biolink for their link in bio. One link to help you share everything you create.',
   'join_999_people_using_biolink_for_their_link_in_bio_one_link_to_help_you_share_everything_you_are' => 'Join 999+ people using Biolink for their link in bio. One link to help you share everything you are.',
+  'edit_plan_option' => 'Edit Plan Option',
+  'add_user' => 'Add User',
 );
