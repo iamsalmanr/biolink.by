@@ -160,3 +160,15 @@
 
 
 </script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const usernameParam = urlParams.get('username');
+
+        // If the username is found in the URL, autofill the field
+        if (usernameParam) {
+            document.getElementById('username').value = usernameParam;
+        }
+    });
+</script>

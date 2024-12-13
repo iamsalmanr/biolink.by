@@ -15,30 +15,28 @@
                             <p class="lead font-18 mb-24 text-light-3">{{ ___("Join 999+ people using Biolink for their link in bio. One link to help you share everything you are.")  }}</p>
                         </div>
                         <div class="d-flex justify-content-center" data-cues="slideInDown" data-delay="600">
-    <div class="position-relative">
-        <!-- Container for the text and input field aligned horizontally -->
-        <div class="d-flex align-items-center">
-            <!-- Fixed 'biolink.by/' text -->
-            <span class="text-white mr-4">biolink.by/</span>
-            
-            <!-- Input box for the username/handle -->
-            <input type="text" placeholder="Enter your handle" class="form-control bg-dark text-white border-0 shadow-sm" id="usernameInput" />
-            
-            <!-- Feedback message -->
-            <span id="username-feedback" class="text-danger d-none"><i class="fas fa-times-circle mx-2"></i> </span>
-            <span id="username-available" class="text-success d-none">
-                 <i class="fas fa-check-circle mx-2"></i> 
-            </span>
-        </div>
+                        <div class="position-relative">
+                        <!-- Container for the text and input field aligned horizontally -->
+                        <div class="d-flex align-items-center">
+                            <!-- Fixed 'biolink.by/' text -->
+                            <span class="text-white mr-4">biolink.by/</span>
+                            
+                            <!-- Input box for the username/handle -->
+                            <input type="text" placeholder="Enter your handle" class="form-control bg-dark text-white border-0 shadow-sm" id="usernameInput" onchange="updateTryNowButton()" />
+                            
+                            <!-- Feedback message -->
+                            <span id="username-feedback" class="text-danger d-none"><i class="fas fa-times-circle mx-2"></i></span>
+                            <span id="username-available" class="text-success d-none">
+                                <i class="fas fa-check-circle mx-2"></i> 
+                            </span>
+                        </div>
 
-
-        <!-- Button that links to the register page -->
-        <a href="{{ route('register') }}" class="button -primary h-48-px transform-none bg-transparent text-white border-2 mt-2"
-        style="border-color: rgb(34, 193, 195); transition: all 0.3s ease;">
-            <i class="fa-solid fa-stars mr-5"></i> {{ ___('Try Now') }}
-        </a>
-
-    </div>
+                        <!-- Button that links to the register page -->
+                        <a href="{{ route('register') }}" id="tryNowButton" class="button -primary h-48-px transform-none bg-transparent text-white border-2 mt-2"
+                            style="border-color: rgb(34, 193, 195); transition: all 0.3s ease;">
+                            <i class="fa-solid fa-stars mr-5"></i> {{ ___('Try Now') }}
+                        </a>
+</div>
 </div>
 
                         <!-- /div -->
@@ -722,18 +720,31 @@
 </style>
 
 <script>
-
 document.addEventListener('DOMContentLoaded', function () {
     const usernameInput = document.getElementById('usernameInput');
     const feedbackTaken = document.getElementById('username-feedback');
     const feedbackAvailable = document.getElementById('username-available');
 
+    // Create a warning message for username length
+    const warningMessage = document.createElement('span');
+    warningMessage.classList.add('text-warning', 'd-none');
+    warningMessage.innerHTML = '<i class="fas fa-exclamation-circle mx-2"></i> Minimum length 3';
+    usernameInput.insertAdjacentElement('afterend', warningMessage);
+
     if (usernameInput) {
         usernameInput.addEventListener('input', function () {
             const username = usernameInput.value.trim(); // Get the value from the input field
 
-            // If the username length is at least 3 characters
-            if (username.length >= 3) {
+            // Check if the username length is at least 3 characters
+            if (username.length < 3) {
+                // Show the warning message if less than 3 characters
+                warningMessage.classList.remove('d-none');
+                feedbackAvailable.classList.add('d-none');
+                feedbackTaken.classList.add('d-none');
+            } else {
+                // Hide the warning message when the username length is valid
+                warningMessage.classList.add('d-none');
+
                 // Make an AJAX request to check the username
                 fetch('{{ route('admin.users.checkUsername') }}', {
                     method: 'POST',
@@ -759,13 +770,36 @@ document.addEventListener('DOMContentLoaded', function () {
                     feedbackAvailable.classList.add('d-none');
                     feedbackTaken.classList.add('d-none');
                 });
-            } else {
-                // Reset feedback if the username is too short
-                feedbackAvailable.classList.add('d-none');
-                feedbackTaken.classList.add('d-none');
             }
         });
     }
 });
 
+</script>
+
+<script>
+    // Function to update the Try Now button's URL with the entered username
+    function updateTryNowButton() {
+        // Get the username from the input field
+        const username = document.getElementById('usernameInput').value;
+
+        // Get the Try Now button
+        const tryNowButton = document.getElementById('tryNowButton');
+
+        // If username exists, append it to the register page URL
+        if (username) {
+            const url = new URL(tryNowButton.href);
+            url.searchParams.set('username', username);  // Add username as a query parameter
+            tryNowButton.href = url.toString(); // Update the href of the button
+        }
+    }
+
+    document.getElementById('tryNowButton').addEventListener('click', function(event) {
+        // Prevent the default behavior of the link if no username is entered
+        const username = document.getElementById('usernameInput').value;
+        if (!username) {
+            event.preventDefault(); // Don't navigate if no username is entered
+            alert("Please enter a username.");
+        }
+    });
 </script>
