@@ -2,42 +2,42 @@
 @section('navclass', 'nav-dark')
 @section('content')
 
-    <section class="hero-wrapper -style2">
-        <div class="bg-dark-1 overflow-hidden">
-            <div class="pt-180 pb-180 lg-pb-120 text-center position-relative">
-                <img src="{{ asset($activeThemeAssets.'assets/images/shape/spider-web-hero-bg.webp') }}" class="hero-bg-overlay-image position-absolute">
-                <div class="row position-relative mb-100 md-mb-0 lg-mb-30 px-20">
-                    <div class="col-lg-8 col-xxl-7 mx-auto position-relative">
-                        <div>
-                            <h1 class="display-1 sm-font-50 md-font-60 mb-24 fw-bold text-white">
-                                {{ ___('Get Your BioLink in Seconds')  }}
-                            </h1>
-                            <p class="lead font-18 mb-24 text-light-3">{{ ___("Join 999+ people using Biolink for their link in bio. One link to help you share everything you are.")  }}</p>
-                        </div>
-                        <div class="d-flex justify-content-center" data-cues="slideInDown" data-delay="600">
-                        <div class="position-relative">
-                        <!-- Container for the text and input field aligned horizontally -->
-                        <div class="d-flex align-items-center">
-                            <!-- Fixed 'biolink.by/' text -->
-                            <span class="text-white mr-4">biolink.by/</span>
-                            
-                            <!-- Input box for the username/handle -->
-                            <input type="text" placeholder="Enter your handle" class="form-control bg-dark text-white border-0 shadow-sm" id="usernameInput" onchange="updateTryNowButton()" autocomplete="off" />
-                            
-                            <!-- Feedback message -->
-                            <span id="username-feedback" class="text-danger d-none"><i class="fas fa-times-circle mx-2"></i></span>
-                            <span id="username-available" class="text-success d-none">
-                                <i class="fas fa-check-circle mx-2"></i> 
-                            </span>
-                        </div>
+        <section class="hero-wrapper -style2">
+            <div class="bg-dark-1 overflow-hidden">
+                <div class="pt-180 pb-180 lg-pb-120 text-center position-relative">
+                    <img src="{{ asset($activeThemeAssets.'assets/images/shape/spider-web-hero-bg.webp') }}" class="hero-bg-overlay-image position-absolute">
+                    <div class="row position-relative mb-100 md-mb-0 lg-mb-30 px-20">
+                        <div class="col-lg-8 col-xxl-7 mx-auto position-relative">
+                            <div>
+                                <h1 class="display-1 sm-font-50 md-font-60 mb-24 fw-bold text-white">
+                                    {{ ___('Get Your BioLink in Seconds')  }}
+                                </h1>
+                                <p class="lead font-18 mb-24 text-light-3">{{ ___("Join 999+ people using Biolink for their link in bio. One link to help you share everything you are.")  }}</p>
+                            </div>
+                            <div class="d-flex justify-content-center" data-cues="slideInDown" data-delay="600">
+                            <div class="position-relative">
+                            <!-- Container for the text and input field aligned horizontally -->
+                            <div class="d-flex align-items-center">
+                                <!-- Fixed 'biolink.by/' text -->
+                                <span class="text-white mr-4">biolink.by/</span>
+                                
+                                <!-- Input box for the username/handle -->
+                                <input type="text" placeholder="Enter your handle" class="form-control bg-dark text-white border-0 shadow-sm" id="usernameInput" onchange="updateTryNowButton()" autocomplete="off" />
+                                
+                                <!-- Feedback message -->
+                                <span id="username-feedback" class="text-danger d-none"><i class="fas fa-times-circle mx-2"></i></span>
+                                <span id="username-available" class="text-success d-none">
+                                    <i class="fas fa-check-circle mx-2"></i> 
+                                </span>
+                            </div>
 
-                        <!-- Button that links to the register page -->
-                        <a href="{{ route('register') }}" id="tryNowButton" class="button -primary h-48-px transform-none bg-transparent text-white border-2 mt-2"
-                            style="border-color: rgb(34, 193, 195); transition: all 0.3s ease;">
-                            <i class="fa-solid fa-stars mr-5"></i> {{ ___('Try Now') }}
-                        </a>
-</div>
-</div>
+                            <!-- Button that links to the register page -->
+                            <a href="{{ route('register') }}" id="tryNowButton" class="button -primary h-48-px transform-none bg-transparent text-white border-2 mt-2"
+                                style="border-color: rgb(34, 193, 195); transition: all 0.3s ease;">
+                                <i class="fa-solid fa-stars mr-5"></i> {{ ___('Try Now') }}
+                            </a>
+    </div>
+    </div>
 
                         <!-- /div -->
                     </div>
@@ -49,7 +49,7 @@
         <!-- /.container -->
     </section>
     <!-- /section Hero Cover Image-->
-    <section class="d-none d-lg-block">
+    <section class="d-none d-lg-block ml-2">
         <div class="container">
             <div class="hero-cover-image position-relative z-in-9">
                 <div class="d-flex align-items-center gap-3">
@@ -75,10 +75,10 @@
     <!-- /section  Hero Cover Image-->
     {!! ads_on_home_top() !!}
     <!-- / Section CTA Type 1-->
-    <section class="pt-80 pb-120 lg-pb-80">
+    <section class="pt-80 pb-120 lg-pb-80 mx-auto">
         <div class="cta-banner mx-auto  position-relative">
             <div class="container">
-                <div class="row g-5 align-items-start align-items-xl-center">
+                <div class="row ml-2 g-5 align-items-start align-items-xl-center ml-4">
                     <div class="col-lg-7 col-xl-6 d-none d-lg-block">
                         <div class="position-relative mb-35 sm-mb-0 wow fadeInRight" data-wow-delay="300ms">
                             <div class="cta-widget item-box">
@@ -178,7 +178,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-12 col-lg-5 col-xl-5 offset-xl-1">
+                    <div class="col-md-12 col-lg-5 col-xl-5 offset-xl-1 ">
                         <div class="mt-100 lg-mt-0 wow fadeInLeft" data-wow-delay="300ms">
                             <div class="badge bg-primary-l text-primary text-uppercase rounded-pill px-3 fw-bold font-12 py-2 mb-3">
                                 {{ ___('Features')  }}
@@ -332,7 +332,7 @@
     <!-- / Section CTA Type 2-->
     <div class="cta-banner -type3 mx-auto md-mb-80 mb-100 position-relative overflow-hidden">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center  ml-4">
                 <div class="col-lg-5 wow fadeInRight">
                     <div class="main-title mb-30">
                         <div class="badge bg-primary-l text-primary text-uppercase rounded-pill px-3 fw-bold font-12 py-2 mb-3">
@@ -505,7 +505,7 @@
         </section>
     @endif -->
 
-    <section class="py-10  sm:py-16 lg:py-24">
+    <section class="py-10  sm:py-16 lg:py-24  mx-2">
         <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             
             <!-- Heading and Description -->
@@ -567,7 +567,7 @@
         </div>
     </section>
 
-    <section class="our-cta md-mb-80 mb-10">
+    <section class="our-cta md-mb-80 mb-10  mx-2" >
             <section class="py-12 bg-gray-50 sm:py-16 lg:py-20">
             <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div class="max-w-2xl mx-auto text-center">
