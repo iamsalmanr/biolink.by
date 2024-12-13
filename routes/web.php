@@ -112,6 +112,11 @@ Route::group($middlewares, function () {
 
     });
 
+    Route::name('admin.')->namespace('Admin')->group(function () {
+
+        Route::post('/admin/users/check-username', [App\Http\Controllers\Admin\UserController::class, 'checkUsername'])->name('users.checkUsername');
+    });
+
     /* ADMIN ROUTES */
     Route::name('admin.')->prefix(admin_url())->namespace('Admin')->middleware(['admin', 'demo', 'verify.2fa'])->group(function () {
 
@@ -215,3 +220,5 @@ Route::group($middlewares, function () {
 
 /* POST PAGE VIEW */
 Route::get('{slug}', 'User\PostController@publicView')->name('publicView');
+
+

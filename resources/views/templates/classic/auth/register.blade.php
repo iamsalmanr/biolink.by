@@ -1,6 +1,8 @@
 @extends($activeTheme.'layouts.auth')
 @section('title', ___('Sign Up'))
 @section('content')
+
+
     <div class="row vh-100 g-0 login-wrapper">
         <!-- Left Side -->
         <div class="col-lg-5 position-relative d-none d-lg-block">
@@ -39,8 +41,9 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">{{ ___('Username') }} *</label>
-                            <input type="text" name="username" class="form-control input-with-br -h-48" value="{{ old('username') }}"
-                                   placeholder="{{ ___('Username') }}" minlength="6" maxlength="50" required>
+                            <input type="text" id="username" name="username" class="form-control input-with-br -h-48"
+                                value="{{ old('username') }}" placeholder="{{ ___('Username') }}" minlength="3" maxlength="50" required>
+                            <small id="username-feedback" class="text-danger d-none">Username is already taken.</small>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">{{ ___('Email address') }} *</label>
@@ -109,3 +112,51 @@
         <!--/ Right Side -->
     </div>
 @endsection
+
+
+<script>document.addEventListener('DOMContentLoaded', function () {
+    const usernameInput = document.getElementById('username');
+    let debounceTimer;
+
+    if (usernameInput) {
+        usernameInput.addEventListener('input', function () {
+            const username = usernameInput.value.trim();
+            const feedback = document.getElementById('username-feedback');
+
+            clearTimeout(debounceTimer); // Clear the previous timer
+            feedback.textContent = 'Validating...'; // Temporary feedback during validation
+            feedback.classList.remove('d-none');
+
+            debounceTimer = setTimeout(() => {
+                if (username.length >= 3) {
+                    fetch('{{ route('admin.users.checkUsername') }}', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                        },
+                        body: JSON.stringify({ username }),
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.available) {
+                                feedback.textContent = '';
+                                feedback.classList.add('d-none');
+                            } else {
+                                feedback.textContent = 'Username is already taken.';
+                            }
+                        })
+                        .catch(() => {
+                            feedback.textContent = 'Unable to validate username.';
+                        });
+                } else {
+                    feedback.textContent = '';
+                    feedback.classList.add('d-none');
+                }
+            }, 300); // Delay execution by 300ms
+        });
+    }
+});
+
+
+</script>

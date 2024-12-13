@@ -27,3 +27,4 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('2fa/verify', 'Auth\TwoFAController@showTwoFAVerifyForm')->name('2fa.verify');
     Route::post('2fa/verify', 'Auth\TwoFAController@verifyTwoFA');
 });
+

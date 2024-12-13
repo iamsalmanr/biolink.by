@@ -23,7 +23,14 @@
             
             <!-- Input box for the username/handle -->
             <input type="text" placeholder="Enter your handle" class="form-control bg-dark text-white border-0 shadow-sm" id="usernameInput" />
+            
+            <!-- Feedback message -->
+            <span id="username-feedback" class="text-danger d-none"><i class="fas fa-times-circle mx-2"></i> </span>
+            <span id="username-available" class="text-success d-none">
+                 <i class="fas fa-check-circle mx-2"></i> 
+            </span>
         </div>
+
 
         <!-- Button that links to the register page -->
         <a href="{{ route('register') }}" class="button -primary h-48-px transform-none bg-transparent text-white border-2 mt-2"
@@ -713,3 +720,52 @@
 
 
 </style>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+    const usernameInput = document.getElementById('usernameInput');
+    const feedbackTaken = document.getElementById('username-feedback');
+    const feedbackAvailable = document.getElementById('username-available');
+
+    if (usernameInput) {
+        usernameInput.addEventListener('input', function () {
+            const username = usernameInput.value.trim(); // Get the value from the input field
+
+            // If the username length is at least 3 characters
+            if (username.length >= 3) {
+                // Make an AJAX request to check the username
+                fetch('{{ route('admin.users.checkUsername') }}', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                    },
+                    body: JSON.stringify({ username: username }), // Send the username to the server
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Display feedback based on the availability
+                    if (data.available) {
+                        feedbackTaken.classList.add('d-none'); // Hide taken message
+                        feedbackAvailable.classList.remove('d-none'); // Show available message
+                    } else {
+                        feedbackAvailable.classList.add('d-none'); // Hide available message
+                        feedbackTaken.classList.remove('d-none'); // Show taken message
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    feedbackAvailable.classList.add('d-none');
+                    feedbackTaken.classList.add('d-none');
+                });
+            } else {
+                // Reset feedback if the username is too short
+                feedbackAvailable.classList.add('d-none');
+                feedbackTaken.classList.add('d-none');
+            }
+        });
+    }
+});
+
+</script>

@@ -11,6 +11,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Validator;
+use Illuminate\Support\Facades\Log;
 
 class UserController extends Controller
 {
@@ -19,6 +20,39 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function checkUsername(Request $request)
+     {
+         $username = $request->input('username');  // Get the username from the request
+         
+         // Check if the username exists in the database
+         if (!empty($username)) {
+             $users = User::where('username', 'like', '%' . $username . '%')
+                         ->limit(1) // Limit to 1 result for efficiency
+                         ->get();
+             
+             // Check if the username is already taken
+             $isUsernameTaken = $users->count() > 0;
+     
+             // Log the username check result
+             Log::info('Username check:', [
+                 'username' => $username,
+                 'available' => !$isUsernameTaken
+             ]);
+     
+             // Return response with availability status
+             return response()->json(['available' => !$isUsernameTaken]);
+         }
+     
+         // If no username is provided, return as available
+         Log::info('Username check:', [
+             'username' => $username,
+             'available' => true
+         ]);
+     
+         return response()->json(['available' => true]);
+     }
+     
     public function index(Request $request)
     {
         if ($request->ajax()) {
