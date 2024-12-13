@@ -27,9 +27,8 @@ class UserController extends Controller
          
          // Check if the username exists in the database
          if (!empty($username)) {
-             $users = User::where('username', 'like', '%' . $username . '%')
-                         ->limit(1) // Limit to 1 result for efficiency
-                         ->get();
+            $users = User::where('username', '=', $username)->limit(1)->get();
+
              
              // Check if the username is already taken
              $isUsernameTaken = $users->count() > 0;
