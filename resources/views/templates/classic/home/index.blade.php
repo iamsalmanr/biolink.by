@@ -22,7 +22,7 @@
                             <span class="text-white mr-4">biolink.by/</span>
                             
                             <!-- Input box for the username/handle -->
-                            <input type="text" placeholder="Enter your handle" class="form-control bg-dark text-white border-0 shadow-sm" id="usernameInput" onchange="updateTryNowButton()" />
+                            <input type="text" placeholder="Enter your handle" class="form-control bg-dark text-white border-0 shadow-sm" id="usernameInput" onchange="updateTryNowButton()" autocomplete="off" />
                             
                             <!-- Feedback message -->
                             <span id="username-feedback" class="text-danger d-none"><i class="fas fa-times-circle mx-2"></i></span>
