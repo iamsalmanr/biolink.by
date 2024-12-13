@@ -675,4 +675,5 @@ return array (
   'join_999_people_using_biolink_for_their_link_in_bio_one_link_to_help_you_share_everything_you_are' => 'Join 999+ people using Biolink for their link in bio. One link to help you share everything you are.',
   'edit_plan_option' => 'Edit Plan Option',
   'add_user' => 'Add User',
+  'get_your_biolink_in_seconds' => 'Get Your BioLink in Seconds',
 );

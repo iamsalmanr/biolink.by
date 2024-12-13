@@ -10,7 +10,7 @@
                     <div class="col-lg-8 col-xxl-7 mx-auto position-relative">
                         <div>
                             <h1 class="display-1 sm-font-50 md-font-60 mb-24 fw-bold text-white">
-                                {{ ___('Your BioLink in Seconds')  }}
+                                {{ ___('Get Your BioLink in Seconds')  }}
                             </h1>
                             <p class="lead font-18 mb-24 text-light-3">{{ ___("Join 999+ people using Biolink for their link in bio. One link to help you share everything you are.")  }}</p>
                         </div>
