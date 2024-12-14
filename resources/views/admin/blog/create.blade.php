@@ -26,7 +26,7 @@
                                         <span class="d-none d-sm-block ms-2">{{ ___('Upload Image') }}</span>
                                         <input name="image" type="file" id="upload" hidden
                                                onchange="readURL(this,'uploadedImage')"
-                                               accept="image/png, image/jpeg">
+                                               accept="image/png, image/jpeg,image/svg">
                                     </label>
                                     <p class="form-text mb-0">{{ ___('Allowed JPG, JPEG or PNG.') }}</p>
                                 </div>

@@ -12,8 +12,8 @@
         <div class="mobile-responsive-menu">
             <div class="logo">
                 <a href="{{ route('home') }}">
-                    <img class="main-logo" src="{{ asset('storage/brand/'.$settings->media->dark_logo) }}" alt="{{ @$settings->site_title }}" />
-                    <img class="white-logo" src="{{ asset('storage/brand/'.$settings->media->dark_logo) }}" alt="{{ @$settings->site_title }}" />
+                    <img class="main-logo" src="{{  asset('storage/brand/logo_light_main.svg') }}" alt="{{ @$settings->site_title }}" />
+                    <img class="white-logo" src="{{  asset('storage/brand/logo_light_main.svg') }}" alt="{{ @$settings->site_title }}" />
                 </a>
             </div>
             <div class="sidemenu-header">

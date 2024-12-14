@@ -53,7 +53,7 @@
                     </tr>
                     <tr>
                         <td class="w-50">{{ ___('IP Address') }}</td>
-                        <td class="fw-medium text-heading text-end">{{ $_SERVER['SERVER_ADDR'] }}</td>
+                        
                     </tr>
                 </table>
 

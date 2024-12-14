@@ -113,7 +113,7 @@
                 @if($show)
                     <div class="quick-bio-logo text-center">
                         <a target="_blank" aria-label="Biolink" rel="noopener nofollow" href="{{ url('/') }}">
-                            <img class="h-30-px" src="{{ asset('storage/brand/'.$settings->media->dark_logo) }}"
+                            <img class="h-30-px" src="{{  asset('storage/brand/logo_light_main.svg')}}"
                                  alt="{{ asset($settings->media->dark_logo) }}{{ $settings->site_title }}">
                         </a>
                     </div>

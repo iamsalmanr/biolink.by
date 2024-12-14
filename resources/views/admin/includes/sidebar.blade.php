@@ -2,9 +2,9 @@
     <div class="app-brand demo ">
         <a href="{{ route('admin.dashboard') }}" class="app-brand-link">
       <span class="app-brand-logo demo">
-          <img width="25" src="{{ asset('storage/brand/'.$settings->media->admin_logo) }}" alt="{{ @$settings->site_title }}" />
+          <img width="120" src="{{ asset('storage/brand/logo_light_main.svg') }}" alt="{{ @$settings->site_title }}" />
       </span>
-            <span class="app-brand-text demo menu-text fw-bold">{{ ___('Admin') }}</span>
+            <span class="app-brand-text demo menu-text fw-bold">{{ ___('') }}</span>
         </a>
 
         <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-xl-none">

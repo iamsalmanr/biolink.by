@@ -22,7 +22,7 @@
                                 {{ ___('Upload New Image') }}
                                 <input name="media[dark_logo]" type="file" id="dark_logo" hidden
                                        onchange="readURL(this,'dark_logo_img')"
-                                       accept=".jpg, .jpeg, .png">
+                                       accept=".jpg, .jpeg, .png,  .svg">
                             </label>
                             <small class="text-muted">{{ ___('Allowed JPG, JPEG or PNG.') }}</small>
                         </div>
@@ -41,7 +41,7 @@
                                 {{ ___('Upload New Image') }}
                                 <input name="media[light_logo]" type="file" id="light_logo" hidden
                                        onchange="readURL(this,'light_logo_img')"
-                                       accept=".jpg, .jpeg, .png">
+                                       accept=".jpg, .jpeg, .png,  .svg">
                             </label>
                             <small class="text-muted">{{ ___('Allowed JPG, JPEG or PNG.') }}</small>
                         </div>

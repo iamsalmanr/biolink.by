@@ -3,7 +3,7 @@
     <div class="container">
         <div class="d-flex justify-content-center align-items-center">
             <div class="d-flex flex-column align-items-center">
-                <img class="mb-16 w-110-px" src="{{ asset('storage/brand/'.$settings->media->dark_logo) }}" alt="{{ @$settings->site_title }}">
+                <img class="mb-16 w-110-px" src="{{ asset('storage/brand/logo_light_main.svg') }}" alt="{{ @$settings->site_title }}">
                 <div class="d-flex align-items-center font-16 gap-3">
                     @if ($navMenus->count() > 0)
                         @foreach ($navMenus as $navMenu)
