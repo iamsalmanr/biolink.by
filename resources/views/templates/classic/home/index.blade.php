@@ -2,52 +2,50 @@
 @section('navclass', 'nav-dark')
 @section('content')
 
-        <section class="hero-wrapper -style2">
-            <div class="bg-dark-1 overflow-hidden">
-                <div class="pt-180 pb-180 lg-pb-120 text-center position-relative">
-                    <img src="{{ asset($activeThemeAssets.'assets/images/shape/spider-web-hero-bg.webp') }}" class="hero-bg-overlay-image position-absolute">
-                    <div class="row position-relative mb-100 md-mb-0 lg-mb-30 px-20">
-                        <div class="col-lg-8 col-xxl-7 mx-auto position-relative">
-                            <div>
-                                <h1 class="display-1 sm-font-50 md-font-60 mb-24 fw-bold text-white">
-                                    {{ ___('Get Your BioLink in Seconds')  }}
-                                </h1>
-                                <p class="lead font-18 mb-24 text-light-3">{{ ___("Join 999+ people using Biolink for their link in bio. One link to help you share everything you are.")  }}</p>
-                            </div>
-                            <div class="d-flex justify-content-center" data-cues="slideInDown" data-delay="600">
-                            <div class="position-relative">
-                            <!-- Container for the text and input field aligned horizontally -->
-                            <div class="d-flex align-items-center">
-                                <!-- Fixed 'biolink.by/' text -->
-                                <span class="text-white mr-4">biolink.by/</span>
-                                
-                                <!-- Input box for the username/handle -->
-                                <input type="text" placeholder="Enter your handle" class="form-control bg-dark text-white border-0 shadow-sm" id="usernameInput" onchange="updateTryNowButton()" autocomplete="off" />
-                                
-                                <!-- Feedback message -->
-                                <span id="username-feedback" class="text-danger d-none"><i class="fas fa-times-circle mx-2"></i></span>
-                                <span id="username-available" class="text-success d-none">
+<section class="hero-wrapper -style2">
+    <div class="bg-dark-1 overflow-hidden" style="padding: 0;">
+        <div class="pt-180 pb-180 lg-pb-120 text-center position-relative" style="position: relative;">
+            <!-- Animated gradient background -->
+            <div class="hero-bg-overlay position-absolute" 
+                 style="top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; 
+                        background: linear-gradient(45deg, #FF6347, #FFD700, #00BFFF, #8A2BE2); 
+                        opacity: 0.4; animation: gradientAnimation 10s ease-in-out infinite;"></div>
+            <div class="row position-relative mb-100 md-mb-0 lg-mb-30 px-20" style="position: relative;">
+                <div class="col-lg-8 col-xxl-7 mx-auto position-relative" style="position: relative;">
+                    <div>
+                        <h1 class="display-1 sm-font-50 md-font-60 mb-24 fw-bold text-white" 
+                            style="font-size: 3rem; font-weight: 700; color: white; text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);">
+                            {{ ___('Your BioLink in Seconds') }}
+                        </h1>
+                        <p class="lead font-18 mb-24 text-light-3" 
+                           style="font-size: 1.125rem; color: rgba(255, 255, 255, 0.8); line-height: 1.6;">
+                            {{ ___("Join 999+ people using Biolink for their link in bio. One link to help you share everything you are.") }}
+                        </p>
+                    </div>
+                    <div class="d-flex justify-content-center" data-cues="slideInDown" data-delay="600">
+                        <div class="position-relative" style="display: inline-block;">
+                            <div class="d-flex align-items-center" style="display: flex; justify-content: center; position: relative;">
+                                <span class="text-white mr-4" style="color: white; font-size: 1.125rem; font-weight: 500; margin-right: 0.5rem;">biolink.by/</span>
+                                <input type="text" placeholder="Enter your handle" class="form-control bg-dark text-white border-0 shadow-sm" 
+                                       id="usernameInput" autocomplete="off" style="padding: 0.75rem 1rem; font-size: 1rem; color: #fff; background-color: #333; border: 1px solid #444; border-radius: 5px; width: 250px;">
+                                <span id="username-feedback" class="text-danger d-none" style="color: #dc3545; font-size: 1rem;">
+                                    <i class="fas fa-times-circle mx-2"></i>
+                                </span>
+                                <span id="username-available" class="text-success d-none" style="color: #28a745; font-size: 1rem;">
                                     <i class="fas fa-check-circle mx-2"></i> 
                                 </span>
                             </div>
-
-                            <!-- Button that links to the register page -->
                             <a href="{{ route('register') }}" id="tryNowButton" class="button -primary h-48-px transform-none bg-transparent text-white border-2 mt-2"
-                                style="border-color: rgb(34, 193, 195); transition: all 0.3s ease;">
-                                <i class="fa-solid fa-stars mr-5"></i> {{ ___('Try Now') }}
+                               style="border-color: #22c1c3; background-color: transparent; color: white; font-size: 1.125rem; padding: 0.75rem 1.5rem; border-radius: 5px; text-decoration: none; display: inline-flex; align-items: center; transition: all 0.3s ease-in-out;">
+                                <i class="fa-solid fa-stars mr-5" style="margin-right: 10px;"></i> {{ ___('Try Now') }}
                             </a>
-    </div>
-    </div>
-
-                        <!-- /div -->
+                        </div>
                     </div>
-                    <!-- /column -->
                 </div>
-                <!-- /.row -->
             </div>
         </div>
-        <!-- /.container -->
-    </section>
+    </div>
+</section>
     <!-- /section Hero Cover Image-->
     <section class="d-none d-lg-block ml-2">
         <div class="container">
@@ -803,3 +801,31 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 </script>
+<!-- Add the animations to the CSS -->
+<style>
+    /* Keyframes for gradient animation */
+    @keyframes gradientAnimation {
+        0% {
+            background: linear-gradient(45deg, #FF6347, #FFD700, #00BFFF, #8A2BE2);
+        }
+        25% {
+            background: linear-gradient(45deg, #6A5ACD, #FF6347, #FFD700, #00BFFF);
+        }
+        50% {
+            background: linear-gradient(45deg, #32CD32, #6A5ACD, #FF6347, #FFD700);
+        }
+        75% {
+            background: linear-gradient(45deg, #FFD700, #32CD32, #6A5ACD, #FF6347);
+        }
+        100% {
+            background: linear-gradient(45deg, #FF6347, #FFD700, #00BFFF, #8A2BE2);
+        }
+    }
+
+    /* Apply the animation to the background with smooth easing */
+    .hero-bg-overlay {
+        animation: gradientAnimation 10s ease-in-out infinite; /* 10s duration with ease-in-out */
+        background-size: 400% 400%; /* Makes the background move */
+        transition: background 1s ease-in-out; /* Smooth transition for the background */
+    }
+</style>
